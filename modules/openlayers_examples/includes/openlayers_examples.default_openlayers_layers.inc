@@ -70,15 +70,7 @@ function openlayers_examples_default_openlayers_layers() {
   $ol_layer->machine_name = 'openlayers_examples_layer_googlemaps';
   $ol_layer->name = 'Openlayers examples: Google Maps';
   $ol_layer->description = '';
-  $ol_layer->factory_service = 'openlayers.Layer:Tile';
-  $ol_layer->options = array(
-    'source' => 'openlayers_examples_source_googlemaps',
-    'visible' => 1,
-    'style' => 'openlayers_style_default',
-    'url' => '',
-    'zoomOffset' => '0',
-    'wrapDateLine' => 0,
-  );
+  $ol_layer->factory_service = 'openlayers.Layer:Google';
   $export['openlayers_examples_layer_googlemaps'] = $ol_layer;
 
   $ol_layer = new stdClass();

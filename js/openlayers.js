@@ -178,7 +178,8 @@
         {
           'type': 'objects',
           'settings': settings,
-          'context': context
+          'context': context,
+          'map': map
         }
       ]);
 

@@ -1,0 +1,9 @@
+name = "Openlayers Google"
+description = "Provides Google Layers using the Openlayers Google Maps integration library."
+core = 7.x
+php = 5.3.10
+package = "Openlayers"
+
+dependencies[] = openlayers
+
+registry_autoload[] = PSR-4

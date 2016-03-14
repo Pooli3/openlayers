@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Main file of the Openlayers Google Maps integration library module.
+ */
+
+/**
+ * Implements hook_libraries_info().
+ */
+function openlayers_google_libraries_info() {
+  // During an upgrade from Openlayers 7.x-2.x branch, the new registry_autoload
+  // dependency may not be enabled, which makes it impossible to use the new
+  // namespaced classes. So provide a fallback variable instead.
+  $js_css_group = 'openlayers';
+  if (class_exists('\Drupal\openlayers\Config')) {
+    $js_css_group = \Drupal\openlayers\Config::get('openlayers.js_css.group');
+  }
+
+  $libraries['ol3-google-maps'] = array(
+    'name' => 'Openlayers 3 Google Maps',
+    'vendor url' => 'https://github.com/mapgears/ol3-google-maps',
+    'download url' => 'https://github.com/mapgears/ol3-google-maps/releases/download/v0.4/ol3-google-maps-v0.4.zip',
+    'version arguments' => array(
+      'file' => 'ol3gm.js',
+      'pattern' => '/Version: v(.*)-/',
+      'lines' => 3,
+      'cols' => 100
+    ),
+    'files' => array(
+      'js' => array(
+        'ol3gm.js' => array(
+          'weight' => 1,
+          'group' => $js_css_group,
+        ),
+      ),
+      'css' => array(
+        'ol3gm.css' => array(
+          'weight' => 2,
+          'group' => $js_css_group,
+        ),
+      ),
+    ),
+  );
+
+  return $libraries;
+}
