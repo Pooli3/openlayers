@@ -11,66 +11,6 @@ function openlayers_examples_default_openlayers_sources() {
   $export = array();
 
   $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapbox_example1';
-  $ol_source->name = 'Openlayers examples: MapBox example 1';
-  $ol_source->description = 'Source MapBox example 1';
-  $ol_source->factory_service = 'openlayers.Source:TileJSON';
-  $ol_source->options = array(
-    'url' => '//api.tiles.mapbox.com/v3/examples.c7d2024a.jsonp',
-  );
-  $export['openlayers_examples_source_mapbox_example1'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapbox_example2';
-  $ol_source->name = 'Openlayers examples: MapBox example 2';
-  $ol_source->description = 'Source MapBox example 2, used by ft.com.';
-  $ol_source->factory_service = 'openlayers.Source:TileJSON';
-  $ol_source->options = array(
-    'url' => '//api.tiles.mapbox.com/v3/financialtimes.map-w7l4lfi8.jsonp',
-  );
-  $export['openlayers_examples_source_mapbox_example2'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapbox_geography_class';
-  $ol_source->name = 'Openlayers examples: MapBox Geography Class';
-  $ol_source->description = 'Source MapBox Geography Class description';
-  $ol_source->factory_service = 'openlayers.Source:TileJSON';
-  $ol_source->options = array(
-    'url' => '//api.tiles.mapbox.com/v3/mapbox.geography-class.jsonp',
-  );
-  $export['openlayers_examples_source_mapbox_geography_class'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapbox_geography_class_utfgrid';
-  $ol_source->name = 'Openlayers examples: MapBox Geography Class UTFgrid';
-  $ol_source->description = 'Source MapBox Geography Class UTFgrid description';
-  $ol_source->factory_service = 'openlayers.Source:TileUTFGrid';
-  $ol_source->options = array(
-    'url' => '//api.tiles.mapbox.com/v3/mapbox.geography-class.json',
-  );
-  $export['openlayers_examples_source_mapbox_geography_class_utfgrid'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapbox_natural_earth_hypso_bathy';
-  $ol_source->name = 'Openlayers examples: MapBox Natural Earth Hypso Bathy';
-  $ol_source->description = 'Source MapBox Natural Hearth Hypso Bathy description';
-  $ol_source->factory_service = 'openlayers.Source:TileJSON';
-  $ol_source->options = array(
-    'url' => '//api.tiles.mapbox.com/v3/mapbox.natural-earth-hypso-bathy.jsonp',
-  );
-  $export['openlayers_examples_source_mapbox_natural_earth_hypso_bathy'] = $ol_source;
-
-  $ol_source = new stdClass();
   $ol_source->disabled = FALSE; /* Edit this to true to make a default ol_source disabled initially */
   $ol_source->api_version = 1;
   $ol_source->machine_name = 'openlayers_examples_source_googlemaps';
@@ -340,30 +280,6 @@ function openlayers_examples_default_openlayers_sources() {
   $ol_source->factory_service = 'openlayers.Source:BingMaps';
   $ol_source->options = array();
   $export['openlayers_examples_source_bingmaps'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapquest_sat';
-  $ol_source->name = 'Openlayers examples: MapQuest Satellite';
-  $ol_source->description = 'Source MapQuest Satellite description';
-  $ol_source->factory_service = 'openlayers.Source:MapQuest';
-  $ol_source->options = array(
-    'layer' => 'sat',
-  );
-  $export['openlayers_examples_source_mapquest_sat'] = $ol_source;
-
-  $ol_source = new stdClass();
-  $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */
-  $ol_source->api_version = 1;
-  $ol_source->machine_name = 'openlayers_examples_source_mapquest_hyb';
-  $ol_source->name = 'Openlayers examples: MapQuest Hybrid';
-  $ol_source->description = 'Source MapQuest Hybrid';
-  $ol_source->factory_service = 'openlayers.Source:MapQuest';
-  $ol_source->options = array(
-    'layer' => 'hyb',
-  );
-  $export['openlayers_examples_source_mapquest_hyb'] = $ol_source;
 
   $ol_source = new stdClass();
   $ol_source->disabled = FALSE; /* Edit this to true to make a default source disabled initially */

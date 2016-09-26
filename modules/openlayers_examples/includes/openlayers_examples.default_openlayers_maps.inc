@@ -73,7 +73,7 @@ function openlayers_examples_default_openlayers_maps() {
       'zoom' => '2',
     ),
     'layers' => array(
-      0 => 'openlayers_examples_layer_tile_mapbox_example2',
+      0 => 'openlayers_examples_layer_openstreetmap_mapnik',
       1 => 'openlayers_examples_layer_vector_geojson_cities',
     ),
     'interactions' => array(
@@ -148,7 +148,7 @@ function openlayers_examples_default_openlayers_maps() {
       'zoom' => '2',
     ),
     'layers' => array(
-      0 => 'openlayers_examples_layer_tile_mapbox_example2',
+      0 => 'openlayers_examples_layer_openstreetmap_mapnik',
       1 => 'openlayers_examples_layer_vector_geojson_cities_heatmap',
     ),
     'interactions' => array(
@@ -193,41 +193,6 @@ function openlayers_examples_default_openlayers_maps() {
     ),
   );
   $export['openlayers_examples_map_geolocation'] = $ol_map;
-
-  $ol_map = new stdClass();
-  $ol_map->disabled = FALSE; /* Edit this to true to make a default map disabled initially */
-  $ol_map->api_version = 1;
-  $ol_map->machine_name = 'openlayers_examples_map_mapquest_views_geojson';
-  $ol_map->name = 'Openlayers examples: Features from Views';
-  $ol_map->description = '';
-  $ol_map->factory_service = 'openlayers.Map:OLMap';
-  $ol_map->options = array(
-    'width' => 'auto',
-    'height' => '300px',
-    'contextualLinks' => 1,
-    'provideBlock' => 1,
-    'provideIframe' => 1,
-    'view' => array(
-      'center' => array(
-        'lat' => '0',
-        'lon' => '0',
-      ),
-      'rotation' => '0',
-      'zoom' => '2',
-    ),
-    'layers' => array(
-      0 => 'openlayers_examples_layer_mapquest_sat',
-      1 => 'openlayers_examples_layer_views_geojson',
-    ),
-    'controls' => array(
-      0 => 'openlayers_control_zoom',
-      1 => 'openlayers_control_zoomslider',
-    ),
-    'components' => array(
-      0 => 'openlayers_examples_component_zoom_to_source',
-    ),
-  );
-  $export['openlayers_examples_map_mapquest_views_geojson'] = $ol_map;
 
   $ol_map = new stdClass();
   $ol_map->disabled = FALSE; /* Edit this to true to make a default map disabled initially */
@@ -336,18 +301,15 @@ function openlayers_examples_default_openlayers_maps() {
       'zoom' => '2',
     ),
     'layers' => array(
-      0 => 'openlayers_examples_layer_mapbox_geography_class',
-      1 => 'openlayers_examples_layer_mapquest_hyb',
-      2 => 'openlayers_examples_layer_mapquest_sat',
-      3 => 'openlayers_examples_layer_stamen3',
-      4 => 'openlayers_layer_tile_osm',
-      5 => 'openlayers_examples_layer_openstreetmap_mapnik',
-      6 => 'openlayers_examples_layer_vector_kml_earthquakes',
-      7 => 'openlayers_examples_layer_views_geojson',
-      8 => 'openlayers_examples_layer_vector_geojson_cities_heatmap',
-      9 => 'openlayers_examples_layer_vector_kml_earthquakes_heatmap',
-      10 => 'openlayers_examples_layer_vector_geojson_cities',
-      11 => 'openlayers_examples_layer_cluster_cities',
+      0 => 'openlayers_examples_layer_stamen3',
+      1 => 'openlayers_layer_tile_osm',
+      2 => 'openlayers_examples_layer_openstreetmap_mapnik',
+      3 => 'openlayers_examples_layer_vector_kml_earthquakes',
+      4 => 'openlayers_examples_layer_views_geojson',
+      5 => 'openlayers_examples_layer_vector_geojson_cities_heatmap',
+      6 => 'openlayers_examples_layer_vector_kml_earthquakes_heatmap',
+      7 => 'openlayers_examples_layer_vector_geojson_cities',
+      8 => 'openlayers_examples_layer_cluster_cities',
     ),
     'controls' => array(
       0 => 'openlayers_control_zoom',
@@ -362,120 +324,6 @@ function openlayers_examples_default_openlayers_maps() {
     ),
   );
   $export['openlayers_examples_map_blocklayerswitcher'] = $ol_map;
-
-  $ol_map = new stdClass();
-  $ol_map->api_version = 1;
-  $ol_map->machine_name = 'openlayers_examples_map_mapquest_openstreetmap';
-  $ol_map->name = 'Openlayers examples: MapQuest OpenStreetMap';
-  $ol_map->description = '';
-  $ol_map->factory_service = 'openlayers.Map:OLMap';
-  $ol_map->options = array(
-    'width' => 'auto',
-    'height' => '300px',
-    'contextualLinks' => 1,
-    'provideBlock' => 1,
-    'view' => array(
-      'center' => array(
-        'lat' => '0',
-        'lon' => '0',
-      ),
-      'rotation' => '0',
-      'zoom' => '2',
-    ),
-    'layers' => array(
-      0 => 'openlayers_layer_tile_osm',
-    ),
-    'controls' => array(
-      0 => 'openlayers_control_rotate',
-      1 => 'openlayers_control_scaleline',
-      2 => 'openlayers_control_zoom',
-      3 => 'openlayers_control_zoomslider',
-      4 => 'openlayers_control_zoomtoextent',
-    ),
-    'interactions' => array(
-      0 => 'openlayers_interaction_doubleclickzoom',
-      1 => 'openlayers_interaction_dragpan',
-      2 => 'openlayers_interaction_dragrotate',
-      3 => 'openlayers_interaction_keyboardpan',
-      4 => 'openlayers_interaction_mousewheelzoom',
-    ),
-  );
-  $export['openlayers_examples_map_mapquest_openstreetmap'] = $ol_map;
-
-  $ol_map = new stdClass();
-  $ol_map->disabled = FALSE; /* Edit this to true to make a default map disabled initially */
-  $ol_map->api_version = 1;
-  $ol_map->machine_name = 'openlayers_examples_map_mapquest_hybrid';
-  $ol_map->name = 'Openlayers examples: MapQuest Hybrid';
-  $ol_map->description = '';
-  $ol_map->factory_service = 'openlayers.Map:OLMap';
-  $ol_map->options = array(
-    'width' => 'auto',
-    'height' => '300px',
-    'contextualLinks' => 1,
-    'provideBlock' => 1,
-    'provideIframe' => 1,
-    'view' => array(
-      'center' => array(
-        'lat' => '0',
-        'lon' => '0',
-      ),
-      'rotation' => '0',
-      'zoom' => '2',
-    ),
-    'layers' => array(
-      0 => 'openlayers_examples_layer_mapquest_sat',
-      1 => 'openlayers_examples_layer_mapquest_hyb',
-    ),
-    'controls' => array(
-      0 => 'openlayers_control_attribution',
-      1 => 'openlayers_control_rotate',
-      2 => 'openlayers_control_zoom',
-    ),
-    'interactions' => array(
-      0 => 'openlayers_interaction_doubleclickzoom',
-      1 => 'openlayers_interaction_dragpan',
-      2 => 'openlayers_interaction_dragrotateandzoom',
-      3 => 'openlayers_interaction_mousewheelzoom',
-    ),
-  );
-  $export['openlayers_examples_map_mapquest_hybrid'] = $ol_map;
-
-  $ol_map = new stdClass();
-  $ol_map->api_version = 1;
-  $ol_map->machine_name = 'openlayers_examples_map_mapquest_satellite';
-  $ol_map->name = 'Openlayers examples: MapQuest Satellite';
-  $ol_map->description = '';
-  $ol_map->factory_service = 'openlayers.Map:OLMap';
-  $ol_map->options = array(
-    'width' => 'auto',
-    'height' => '300px',
-    'contextualLinks' => 1,
-    'provideBlock' => 1,
-    'provideIframe' => 1,
-    'view' => array(
-      'center' => array(
-        'lat' => '0',
-        'lon' => '0',
-      ),
-      'rotation' => '0',
-      'zoom' => '2',
-    ),
-    'layers' => array(
-      0 => 'openlayers_examples_layer_mapquest_sat',
-    ),
-    'controls' => array(
-      0 => 'openlayers_control_mouseposition',
-      1 => 'openlayers_control_scaleline',
-    ),
-    'interactions' => array(
-      0 => 'openlayers_interaction_doubleclickzoom',
-      1 => 'openlayers_interaction_dragpan',
-      2 => 'openlayers_interaction_dragrotateandzoom',
-      3 => 'openlayers_interaction_mousewheelzoom',
-    ),
-  );
-  $export['openlayers_examples_map_mapquest_satellite'] = $ol_map;
 
   $ol_map = new stdClass();
   $ol_map->disabled = FALSE; /* Edit this to true to make a default map disabled initially */
@@ -838,7 +686,7 @@ function openlayers_examples_default_openlayers_maps() {
       'maxZoom' => '0',
     ),
     'layers' => array(
-      0 => 'openlayers_examples_layer_mapquest_sat',
+      0 => 'openlayers_layer_tile_osm',
       1 => 'openlayers_examples_layer_openweather_precipitation',
       2 => 'openlayers_examples_layer_openweather_precipitation_cls',
       3 => 'openlayers_examples_layer_openweather_clouds',
@@ -869,55 +717,6 @@ function openlayers_examples_default_openlayers_maps() {
   $ol_map = new stdClass();
   $ol_map->disabled = FALSE; /* Edit this to true to make a default ol_map disabled initially */
   $ol_map->api_version = 1;
-  $ol_map->machine_name = 'openlayers_examples_map_mapbox';
-  $ol_map->name = 'Openlayers examples: Mapbox';
-  $ol_map->description = '';
-  $ol_map->factory_service = 'openlayers.Map:OLMap';
-  $ol_map->options = array(
-    'renderer' => 'canvas',
-    'width' => 'auto',
-    'height' => '300px',
-    'contextualLinks' => 1,
-    'provideIframe' => 1,
-    'view' => array(
-      'center' => array(
-        'lat' => '0',
-        'lon' => '0',
-      ),
-      'rotation' => '0',
-      'zoom' => '2',
-      'minZoom' => '0',
-      'maxZoom' => '0',
-    ),
-    'layers' => array(
-      0 => 'openlayers_examples_layer_tile_mapbox_example1',
-      1 => 'openlayers_examples_layer_tile_mapbox_example2',
-      3 => 'openlayers_examples_layer_mapbox_geography_class',
-      4 => 'openlayers_examples_layer_mapbox_natural_earth_hypso_bathy',
-      5 => 'openlayers_examples_layer_mapbox_geography_class_utfgrid',
-    ),
-    'controls' => array(
-      0 => 'openlayers_control_attribution',
-      1 => 'openlayers_control_fullscreen',
-      2 => 'openlayers_control_rotate',
-      3 => 'openlayers_control_zoom',
-      4 => 'openlayers_examples_control_mapbox_layer_switcher',
-    ),
-    'interactions' => array(
-      0 => 'openlayers_interaction_doubleclickzoom',
-      1 => 'openlayers_interaction_dragpan',
-      2 => 'openlayers_interaction_dragrotate',
-      3 => 'openlayers_interaction_mousewheelzoom',
-    ),
-    'components' => array(
-      0 => 'openlayers_examples_component_tileutfgrid',
-    ),
-  );
-  $export['openlayers_examples_map_mapbox'] = $ol_map;
-
-  $ol_map = new stdClass();
-  $ol_map->disabled = FALSE; /* Edit this to true to make a default ol_map disabled initially */
-  $ol_map->api_version = 1;
   $ol_map->machine_name = 'openlayers_examples_map_swipe';
   $ol_map->name = 'Openlayers examples: Swipe';
   $ol_map->description = '';
@@ -937,7 +736,7 @@ function openlayers_examples_default_openlayers_maps() {
     'renderer' => 'canvas',
     'layers' => array(
       0 => 'openlayers_layer_tile_osm',
-      1 => 'openlayers_examples_layer_mapquest_sat',
+      1 => 'openlayers_examples_layer_openstreetmap_bw',
     ),
     'controls' => array(
       0 => 'openlayers_control_attribution',
@@ -1089,7 +888,6 @@ function openlayers_examples_default_openlayers_maps() {
     'controls' => array(
       0 => 'openlayers_control_zoom',
       1 => 'openlayers_control_fullscreen',
-      2 => 'openlayers_control_mouseposition',
     ),
     'interactions' => array(
       0 => 'openlayers_interaction_doubleclickzoom',

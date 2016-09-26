@@ -277,67 +277,6 @@ map.getLayers().forEach(function(layer){
   $ol_component = new stdClass();
   $ol_component->disabled = FALSE; /* Edit this to true to make a default ol_component disabled initially */
   $ol_component->api_version = 1;
-  $ol_component->machine_name = 'openlayers_examples_component_tileutfgrid';
-  $ol_component->name = 'Openlayers examples: TileUTFGrid';
-  $ol_component->description = 'Example based on http://openlayers.org/en/v3.1.0/examples/tileutfgrid.html.';
-  $ol_component->factory_service = 'openlayers.Component:InlineJS';
-  $ol_component->options = array(
-    'javascript' => 'var map = data.map;
-
-var gridSource = data.objects.sources[\'openlayers_examples_source_mapbox_geography_class_utfgrid\'];
-
-var element1 = jQuery(\'<div/>\', {
-  id: \'country-info\',
-    }).appendTo(\'body\');
-var element2 = jQuery(\'<div/>\', {
-  id: \'country-name\',
-}).appendTo(\'#country-info\');
-var element3 = jQuery(\'<img/>\', {
-  id: \'country-flag\'
-}).appendTo(\'#country-info\');
-
-var infoElement = document.getElementById(\'country-info\');
-var flagElement = document.getElementById(\'country-flag\');
-var nameElement = document.getElementById(\'country-name\');
-
-var infoOverlay = new ol.Overlay({
-  element: infoElement,
-  offset: [15, 15],
-  stopEvent: false
-});
-map.addOverlay(infoOverlay);
-
-var displayCountryInfo = function(coordinate) {
-  var viewResolution = /** @type {number} */ (map.getView().getResolution());
-  gridSource.forDataAtCoordinateAndResolution(coordinate, viewResolution,
-      function(data) {
-        // If you want to use the template from the TileJSON,
-        //  load the mustache.js library separately and call
-        //  info.innerHTML = Mustache.render(gridSource.getTemplate(), data);
-        if (data) {
-          /* jshint -W069 */
-          flagElement.src = \'data:image/png;base64,\' + data[\'flag_png\'];
-          nameElement.innerHTML = data[\'admin\'];
-          /* jshint +W069 */
-        }
-        infoOverlay.setPosition(data ? coordinate : undefined);
-      });
-};
-
-jQuery(map.getViewport()).on(\'mousemove\', function(evt) {
-  var coordinate = map.getEventCoordinate(evt.originalEvent);
-  displayCountryInfo(coordinate);
-});
-
-map.on(\'click\', function(evt) {
-  displayCountryInfo(evt.coordinate);
-});',
-  );
-  $export['openlayers_examples_component_tileutfgrid'] = $ol_component;
-
-  $ol_component = new stdClass();
-  $ol_component->disabled = FALSE; /* Edit this to true to make a default ol_component disabled initially */
-  $ol_component->api_version = 1;
   $ol_component->machine_name = 'openlayers_examples_component_swipe';
   $ol_component->name = 'Openlayers examples: Swipe';
   $ol_component->description = '';

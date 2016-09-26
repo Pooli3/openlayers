@@ -125,25 +125,6 @@ function openlayers_examples_default_openlayers_controls() {
   $ol_control = new stdClass();
   $ol_control->disabled = FALSE; /* Edit this to true to make a default ol_control disabled initially */
   $ol_control->api_version = 1;
-  $ol_control->machine_name = 'openlayers_examples_control_mapbox_layer_switcher';
-  $ol_control->name = 'Openlayers examples: Mapbox layer switcher';
-  $ol_control->description = '';
-  $ol_control->factory_service = 'openlayers.Control:LayerSwitcher';
-  $ol_control->options = array(
-    'label' => 'Layers',
-    'layers' => array(
-      'openlayers_examples_layer_mapbox_geography_class' => 'openlayers_examples_layer_mapbox_geography_class',
-      'openlayers_examples_layer_mapbox_natural_earth_hypso_bathy' => 'openlayers_examples_layer_mapbox_natural_earth_hypso_bathy',
-      'openlayers_examples_layer_tile_mapbox_example1' => 'openlayers_examples_layer_tile_mapbox_example1',
-      'openlayers_examples_layer_tile_mapbox_example2' => 'openlayers_examples_layer_tile_mapbox_example2',
-    ),
-    'multiselect' => 0,
-  );
-  $export['openlayers_examples_control_mapbox_layer_switcher'] = $ol_control;
-
-  $ol_control = new stdClass();
-  $ol_control->disabled = FALSE; /* Edit this to true to make a default ol_control disabled initially */
-  $ol_control->api_version = 1;
   $ol_control->machine_name = 'openlayers_examples_control_ol3layerswitcher';
   $ol_control->name = 'Openlayers examples: Control OL3 LayerSwitcher';
   $ol_control->description = '';

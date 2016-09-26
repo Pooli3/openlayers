@@ -26,7 +26,7 @@ class Config {
       'openlayers.js_css.weight' => 20,
       'openlayers.js_css.media' => 'screen',
       'openlayers.edit_view_map' => 'openlayers_map_view_edit_form',
-      'openlayers.variant' => 'local:3.11.2',
+      'openlayers.variant' => 'local:3.18.2',
       'openlayers.debug' => 0,
     );
     if ($key == NULL) {

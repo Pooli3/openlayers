@@ -20,10 +20,10 @@ function openlayers_cesium_libraries_info() {
   $libraries['ol3-cesium'] = array(
     'name' => 'Openlayers 3 Cesium',
     'vendor url' => 'https://github.com/openlayers/ol3-cesium',
-    'download url' => 'https://github.com/openlayers/ol3-cesium/releases/download/v1.11/ol3-cesium-v1.11.zip',
+    'download url' => 'https://github.com/openlayers/ol3-cesium/releases/download/v1.20/ol3-cesium-v1.20.zip',
     'version arguments' => array(
       'file' => 'CHANGES.md',
-      'pattern' => '/##(?: v(.*) - )/',
+      'pattern' => '/\*(?: v(.*))|#(?: v(.*) -)/',
       'lines' => 4,
     ),
     'files' => array(
